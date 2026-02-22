@@ -10,9 +10,10 @@
   "description": "■ URL\nhttps://asahitec.studio.site/\n\n■ Design Concept\nターゲットである国内メーカーのご担当者様に「安心して仕事を任せられる」と感じていただけるよう、製造業に不可欠な**「信頼感」「清潔感」「技術力の高さ」**をテーマにデザインしています。\n\n「設備一覧」や「製作実績」「品質保証体制」といったBtoB取引で重視されるコンテンツを分かりやすく整理し、ユーザーが迷わず情報にアクセスできるUIを心がけました。また、企業のコアである「100％日本向けのモノづくりへのこだわり」やSDGsへの取り組みをしっかりと訴求し、お問い合わせへと繋がる導線を設計しています。\n\n■ 制作期間： 約2ヶ月\n■ 使用ツール： Figma, STUDIO\n■ 担当領域： Webデザイン、STUDIO実装、情報設計",
   "gallery": [
     {
+      "image": "/uploads/screencapture-asahitec-studio-site-home-2025-10-28-23_21_15.png",
       "gradient": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-      "caption": "PC TOP"
+      "caption": "トップページ"
     }
   ],
-  "thumbnail": ""
+  "thumbnail": "/uploads/スクリーンショット 2026-02-22 15.14.20.png"
 }
