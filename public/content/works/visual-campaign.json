@@ -1,25 +1,24 @@
 {
-  "id": "visual-campaign",
-  "title": "Visual Campaign",
-  "category": "graphic",
+  "id": "mynavi",
+  "title": "マイナビ学生の窓口 #春からFES2021",
+  "category": "web",
   "categoryLabel": "Graphic Design",
   "gradient": "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
-  "year": "2025",
-  "client": "Sample Client C",
-  "role": "Art Direction / Graphic Design",
-  "description": "大規模キャンペーンのビジュアル制作を担当。コンセプト策定からメインビジュアルの制作、各メディアへの展開まで一貫して手がけました。ターゲット層に響くクリエイティブで、キャンペーンの認知度向上に貢献しました。",
+  "year": "2021",
+  "client": "株式会社マイナビ",
+  "role": "Web Design",
+  "description": "■ Design Concept\nマイナビ 学生の窓口が開催する #春からFES2021 のサイトデザイン／制作を担当させていただきました。\n\nコロナ禍の影響により、学生のリアルな場での活動が制限される中、この春から新しい生活を迎え、期待や不安を抱える新入生をサポートし、自分らしい学生生活を送っていただけるよう、著名人やアーティストの応援メッセージを発信したり、全国のサークル・学生団体にも活動をアピールできるスペースを設けたり、学生の窓口本サイトとも連動させながら、座談会やオンラインイベントを告知するなど、学生と社会をつなぐ新たなプラットフォームとして設立。\n\nまた、タイトルにもあるフェス感をしっかり演出できるよう、イラストやあしらいで賑やかさを演出する一方で、遷移などがわかりやすいようにコンテンツを設計。\n多種多様なコンテンツが併存するフェス会場としての成立できるようにしました。\n\nこの時期ならではのさまざまな試みを行うことで、「学生のはじめの一歩を応援する」という、学生の窓口様のコンセプトを体現し、同時に、「新しい学生との関わり方」を提起できるような、そんな予感を感じさせるサイトに仕立てました。\n\n■ 制作期間： 約6ヶ月\n■ 使用ツール： Illustrator, Photoshop\n■ 担当領域： Webデザインアシスタント",
   "gallery": [
     {
+      "image": "/uploads/01-1.jpg",
       "gradient": "linear-gradient(135deg, #f093fb 0%, #e04060 100%)",
-      "caption": "メインビジュアル"
+      "caption": "トップページ"
     },
     {
+      "image": "/uploads/03_b-3.jpg",
       "gradient": "linear-gradient(135deg, #f5576c 0%, #f093fb 100%)",
-      "caption": "SNS展開"
-    },
-    {
-      "gradient": "linear-gradient(135deg, #e04060 0%, #f093fb 50%, #f5576c 100%)",
-      "caption": "印刷物"
+      "caption": "詳細ページ"
     }
-  ]
+  ],
+  "thumbnail": "/uploads/00 (1).jpg"
 }
