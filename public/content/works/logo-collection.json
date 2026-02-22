@@ -1,25 +1,29 @@
 {
-  "id": "logo-collection",
-  "title": "Logo Collection",
-  "category": "graphic",
-  "categoryLabel": "Graphic Design",
+  "id": "keserasera",
+  "title": "Branding-けせらせら",
+  "category": "branding",
+  "categoryLabel": "Branding,Graphic Design",
   "gradient": "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)",
   "year": "2024",
-  "client": "Various Clients",
-  "role": "Logo Design / Brand Mark Design",
+  "client": "和食 けせらせら",
+  "role": "Logo Design / Brand Mark Design / Graphic Design",
   "description": "様々な業種のクライアント向けに制作したロゴデザインのコレクション。それぞれのブランドの個性や価値観を反映した、オリジナリティ溢れるデザインを提供しました。",
   "gallery": [
     {
+      "image": "/uploads/ks_logo.png",
       "gradient": "linear-gradient(135deg, #a8edea 0%, #c0ddd0 100%)",
-      "caption": "ロゴマーク集 Vol.1"
+      "caption": "ロゴマーク"
     },
     {
+      "image": "/uploads/ks_flyer-01.jpg",
       "gradient": "linear-gradient(135deg, #fed6e3 0%, #a8edea 100%)",
-      "caption": "ロゴマーク集 Vol.2"
+      "caption": "チラシ-表"
     },
     {
-      "gradient": "linear-gradient(135deg, #c0ddd0 0%, #fed6e3 100%)",
-      "caption": "ロゴタイプ集"
+      "image": "/uploads/ks_flyer-02.jpg",
+      "gradient": "linear-gradient(135deg, #fed6e3 0%, #a8edea 100%)",
+      "caption": "チラシ-裏"
     }
-  ]
+  ],
+  "thumbnail": "/uploads/けせらせら.jpg"
 }
