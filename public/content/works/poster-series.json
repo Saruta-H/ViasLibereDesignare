@@ -1,25 +1,19 @@
 {
-  "id": "poster-kisaradu",
-  "title": "Poster Design",
+  "id": "Love-cd",
+  "title": "CDジャケット",
   "category": "graphic",
   "categoryLabel": "Graphic Design",
   "gradient": "linear-gradient(135deg, #c471f5 0%, #fa71cd 100%)",
-  "year": "2025",
-  "client": "Sample Client L",
-  "role": "Art Direction / Poster Design",
-  "description": "イベント向けポスターシリーズのデザイン。コンセプトの立案からビジュアル制作まで一貫して担当。インパクトのあるグラフィックで、イベントの世界観を視覚的に表現しました。",
+  "year": "2019",
+  "client": "株式会社 カフキーノ",
+  "role": "Graphic Design",
+  "description": "■ Design Concept\nシンガーソングライターLOVEさんの9thアルバム「Resonant Grace」のCDジャケットを企画・制作しました。\n\nタイトル名の「Resonant Grace」（共鳴する恵み）からイメージに合う場所を探し、絶景スポットでもある場所をバックに、躍動感あるLOVEさんを撮影させていただきました。シェンが生み出す美しさは恵であり、LOVEさんの歌声がいつまでも響き渡って手に取る人に、幸せになってもらいたいという思いでデザインしました。\n\n■ 制作期間： 約3ヶ月\n■ 使用ツール： Illustrator, Photoshop\n■ 担当領域：CDジャケットデザインアシスタント、撮影アシスタント",
   "gallery": [
     {
+      "image": "/uploads/02.jpg",
       "gradient": "linear-gradient(135deg, #c471f5 0%, #d050b0 100%)",
-      "caption": "ポスター Vol.1"
-    },
-    {
-      "gradient": "linear-gradient(135deg, #fa71cd 0%, #c471f5 100%)",
-      "caption": "ポスター Vol.2"
-    },
-    {
-      "gradient": "linear-gradient(135deg, #d050b0 0%, #fa71cd 100%)",
-      "caption": "ポスター Vol.3"
+      "caption": "CDジャケット"
     }
-  ]
+  ],
+  "thumbnail": "/uploads/01-4.jpg"
 }
