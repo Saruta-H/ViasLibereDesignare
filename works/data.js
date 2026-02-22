@@ -1,210 +1,45 @@
 /* ============================================
-   Works Data — Shared project data
+   Works Data — Loads project data from JSON files
    ============================================ */
 
-export const worksData = [
-  {
-    id: "brand-identity",
-    title: "Brand Identity Design",
-    category: "branding",
-    categoryLabel: "Branding",
-    gradient: "linear-gradient(135deg, #ccff00 0%, #1a2e1a 100%)",
-    year: "2025",
-    client: "Sample Client A",
-    role: "Brand Strategy / Logo Design / VI Design",
-    description:
-      "企業の本質を捉えたブランドアイデンティティを構築。ロゴデザインからVI（ビジュアルアイデンティティ）システム全体の設計まで、一貫したブランド体験を創出しました。市場調査やヒアリングを通じてブランドの核となる価値を明確にし、視覚的な表現へと落とし込みました。",
-    gallery: [
-      { gradient: "linear-gradient(135deg, #ccff00 0%, #3a5a1a 100%)", caption: "ロゴデザイン" },
-      { gradient: "linear-gradient(135deg, #2a4a0a 0%, #ccff00 100%)", caption: "名刺デザイン" },
-      { gradient: "linear-gradient(135deg, #ccff00 0%, #1a2e1a 50%, #ccff00 100%)", caption: "ブランドガイドライン" },
-    ],
-  },
-  {
-    id: "corporate-website",
-    title: "Corporate Website",
-    category: "web",
-    categoryLabel: "Web Design",
-    gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-    year: "2025",
-    client: "Sample Client B",
-    role: "Web Design / Frontend Development",
-    description:
-      "コーポレートサイトのフルリニューアルプロジェクト。ユーザビリティとブランドイメージの両立を実現し、モダンなデザインと高いパフォーマンスを兼ね備えたサイトを構築しました。レスポンシブ対応はもちろん、アクセシビリティにも配慮した設計を行いました。",
-    gallery: [
-      { gradient: "linear-gradient(135deg, #667eea 0%, #5a3e9a 100%)", caption: "トップページ" },
-      { gradient: "linear-gradient(135deg, #764ba2 0%, #667eea 100%)", caption: "サービスページ" },
-      { gradient: "linear-gradient(135deg, #5a3e9a 0%, #8b6ec0 100%)", caption: "モバイル版" },
-    ],
-  },
-  {
-    id: "visual-campaign",
-    title: "Visual Campaign",
-    category: "graphic",
-    categoryLabel: "Graphic Design",
-    gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
-    year: "2025",
-    client: "Sample Client C",
-    role: "Art Direction / Graphic Design",
-    description:
-      "大規模キャンペーンのビジュアル制作を担当。コンセプト策定からメインビジュアルの制作、各メディアへの展開まで一貫して手がけました。ターゲット層に響くクリエイティブで、キャンペーンの認知度向上に貢献しました。",
-    gallery: [
-      { gradient: "linear-gradient(135deg, #f093fb 0%, #e04060 100%)", caption: "メインビジュアル" },
-      { gradient: "linear-gradient(135deg, #f5576c 0%, #f093fb 100%)", caption: "SNS展開" },
-      { gradient: "linear-gradient(135deg, #e04060 0%, #f093fb 50%, #f5576c 100%)", caption: "印刷物" },
-    ],
-  },
-  {
-    id: "mobile-app",
-    title: "Mobile App Design",
-    category: "uiux",
-    categoryLabel: "UI/UX",
-    gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
-    year: "2024",
-    client: "Sample Client D",
-    role: "UI/UX Design / Prototyping",
-    description:
-      "モバイルアプリのUI/UXデザインプロジェクト。ユーザーリサーチから情報設計、プロトタイピングまでの全工程を担当。直感的な操作性と美しいビジュアルを両立させたデザインを実現しました。",
-    gallery: [
-      { gradient: "linear-gradient(135deg, #4facfe 0%, #00c8fe 100%)", caption: "ホーム画面" },
-      { gradient: "linear-gradient(135deg, #00f2fe 0%, #4facfe 100%)", caption: "詳細画面" },
-      { gradient: "linear-gradient(135deg, #00c8fe 0%, #00f2fe 50%, #4facfe 100%)", caption: "設定画面" },
-    ],
-  },
-  {
-    id: "logo-collection",
-    title: "Logo Collection",
-    category: "graphic",
-    categoryLabel: "Graphic Design",
-    gradient: "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)",
-    year: "2024",
-    client: "Various Clients",
-    role: "Logo Design / Brand Mark Design",
-    description:
-      "様々な業種のクライアント向けに制作したロゴデザインのコレクション。それぞれのブランドの個性や価値観を反映した、オリジナリティ溢れるデザインを提供しました。",
-    gallery: [
-      { gradient: "linear-gradient(135deg, #a8edea 0%, #c0ddd0 100%)", caption: "ロゴマーク集 Vol.1" },
-      { gradient: "linear-gradient(135deg, #fed6e3 0%, #a8edea 100%)", caption: "ロゴマーク集 Vol.2" },
-      { gradient: "linear-gradient(135deg, #c0ddd0 0%, #fed6e3 100%)", caption: "ロゴタイプ集" },
-    ],
-  },
-  {
-    id: "packaging-design",
-    title: "Packaging Design",
-    category: "branding",
-    categoryLabel: "Branding",
-    gradient: "linear-gradient(135deg, #fccb90 0%, #d57eeb 100%)",
-    year: "2024",
-    client: "Sample Client F",
-    role: "Packaging Design / Brand Guide",
-    description:
-      "商品パッケージのデザインとブランドガイドラインの策定。店頭での視認性とブランドの世界観を両立させたパッケージデザインを制作しました。素材選定から印刷管理まで一貫して対応しました。",
-    gallery: [
-      { gradient: "linear-gradient(135deg, #fccb90 0%, #c060d0 100%)", caption: "パッケージ正面" },
-      { gradient: "linear-gradient(135deg, #d57eeb 0%, #fccb90 100%)", caption: "パッケージ展開" },
-      { gradient: "linear-gradient(135deg, #c060d0 0%, #fccb90 50%, #d57eeb 100%)", caption: "ブランドガイド" },
-    ],
-  },
-  {
-    id: "ec-platform",
-    title: "E-Commerce Platform",
-    category: "web",
-    categoryLabel: "Web Design",
-    gradient: "linear-gradient(135deg, #0c3483 0%, #a2b6df 50%, #6b8cce 100%)",
-    year: "2024",
-    client: "Sample Client G",
-    role: "Web Design / E-Commerce UX",
-    description:
-      "ECサイトのデザイン・構築プロジェクト。商品の魅力を最大限に伝えるビジュアルデザインと、スムーズな購入体験を実現するUX設計を行いました。売上向上に直結するUI改善も実施しました。",
-    gallery: [
-      { gradient: "linear-gradient(135deg, #0c3483 0%, #6b8cce 100%)", caption: "トップページ" },
-      { gradient: "linear-gradient(135deg, #a2b6df 0%, #0c3483 100%)", caption: "商品ページ" },
-      { gradient: "linear-gradient(135deg, #6b8cce 0%, #a2b6df 100%)", caption: "カート・決済" },
-    ],
-  },
-  {
-    id: "editorial-design",
-    title: "Editorial Design",
-    category: "graphic",
-    categoryLabel: "Graphic Design",
-    gradient: "linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fdfcfb 100%)",
-    year: "2024",
-    client: "Sample Client H",
-    role: "Editorial Design / Typography",
-    description:
-      "雑誌・エディトリアルデザインのプロジェクト。読みやすさと美しさを両立したタイポグラフィとレイアウトで、コンテンツの魅力を最大限に引き出しました。",
-    gallery: [
-      { gradient: "linear-gradient(135deg, #ff9a9e 0%, #e8a0a0 100%)", caption: "表紙デザイン" },
-      { gradient: "linear-gradient(135deg, #fecfef 0%, #ff9a9e 100%)", caption: "誌面レイアウト" },
-      { gradient: "linear-gradient(135deg, #fdfcfb 0%, #fecfef 100%)", caption: "タイポグラフィ" },
-    ],
-  },
-  {
-    id: "dashboard",
-    title: "Dashboard Design",
-    category: "uiux",
-    categoryLabel: "UI/UX",
-    gradient: "linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%)",
-    year: "2023",
-    client: "Sample Client I",
-    role: "UI/UX Design / Data Visualization",
-    description:
-      "管理画面のUI/UXデザイン。複雑なデータを直感的に把握できるダッシュボードを設計しました。データビジュアライゼーションにより、意思決定を支援するインターフェースを実現しました。",
-    gallery: [
-      { gradient: "linear-gradient(135deg, #a18cd1 0%, #d0a0e8 100%)", caption: "ダッシュボード" },
-      { gradient: "linear-gradient(135deg, #fbc2eb 0%, #a18cd1 100%)", caption: "分析画面" },
-      { gradient: "linear-gradient(135deg, #d0a0e8 0%, #fbc2eb 100%)", caption: "レポート画面" },
-    ],
-  },
-  {
-    id: "restaurant-branding",
-    title: "Restaurant Branding",
-    category: "branding",
-    categoryLabel: "Branding",
-    gradient: "linear-gradient(135deg, #f6d365 0%, #fda085 100%)",
-    year: "2023",
-    client: "Sample Client J",
-    role: "Branding / Menu Design / Space Design",
-    description:
-      "飲食店の総合ブランディングプロジェクト。ロゴ、メニュー、店舗空間のデザインを一貫して担当し、ブランドの世界観を統一しました。ターゲット層のライフスタイルに寄り添ったデザインを提供しました。",
-    gallery: [
-      { gradient: "linear-gradient(135deg, #f6d365 0%, #e89060 100%)", caption: "ロゴ＆サイン" },
-      { gradient: "linear-gradient(135deg, #fda085 0%, #f6d365 100%)", caption: "メニューデザイン" },
-      { gradient: "linear-gradient(135deg, #e89060 0%, #fda085 100%)", caption: "店舗サイン" },
-    ],
-  },
-  {
-    id: "portfolio-site",
-    title: "Portfolio Site",
-    category: "web",
-    categoryLabel: "Web Design",
-    gradient: "linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%)",
-    year: "2023",
-    client: "Sample Client K",
-    role: "Web Design / Development",
-    description:
-      "個人ポートフォリオサイトのデザイン・開発。クリエイターの個性と作品を最大限に引き立てるミニマルなデザインを採用。パフォーマンスとアニメーションにこだわった制作を行いました。",
-    gallery: [
-      { gradient: "linear-gradient(135deg, #89f7fe 0%, #5090e8 100%)", caption: "トップページ" },
-      { gradient: "linear-gradient(135deg, #66a6ff 0%, #89f7fe 100%)", caption: "作品ページ" },
-      { gradient: "linear-gradient(135deg, #5090e8 0%, #66a6ff 100%)", caption: "プロフィール" },
-    ],
-  },
-  {
-    id: "poster-series",
-    title: "Poster Series",
-    category: "graphic",
-    categoryLabel: "Graphic Design",
-    gradient: "linear-gradient(135deg, #c471f5 0%, #fa71cd 100%)",
-    year: "2023",
-    client: "Sample Client L",
-    role: "Art Direction / Poster Design",
-    description:
-      "イベント向けポスターシリーズのデザイン。コンセプトの立案からビジュアル制作まで一貫して担当。インパクトのあるグラフィックで、イベントの世界観を視覚的に表現しました。",
-    gallery: [
-      { gradient: "linear-gradient(135deg, #c471f5 0%, #d050b0 100%)", caption: "ポスター Vol.1" },
-      { gradient: "linear-gradient(135deg, #fa71cd 0%, #c471f5 100%)", caption: "ポスター Vol.2" },
-      { gradient: "linear-gradient(135deg, #d050b0 0%, #fa71cd 100%)", caption: "ポスター Vol.3" },
-    ],
-  },
+// Base path for content (adjusts for GitHub Pages base path)
+const BASE = import.meta.env.BASE_URL || '/';
+
+/**
+ * Fetch all works data from JSON files.
+ * First tries to load the index, then fetches individual files.
+ */
+export async function loadWorksData() {
+  try {
+    // Try loading the pre-built index first
+    const indexRes = await fetch(`${BASE}content/works/index.json`);
+    if (indexRes.ok) {
+      const index = await indexRes.json();
+      return index;
+    }
+  } catch (e) {
+    // Fall through to individual file loading
+  }
+
+  // Fallback: load from known file list
+  return fallbackWorksData;
+}
+
+// Fallback static data (used when JSON files are not available)
+export const fallbackWorksData = [
+  { id: "brand-identity", title: "Brand Identity Design", category: "branding", categoryLabel: "Branding", gradient: "linear-gradient(135deg, #ccff00 0%, #1a2e1a 100%)", year: "2025", client: "Sample Client A", role: "Brand Strategy / Logo Design / VI Design", description: "企業の本質を捉えたブランドアイデンティティを構築。ロゴデザインからVI（ビジュアルアイデンティティ）システム全体の設計まで、一貫したブランド体験を創出しました。市場調査やヒアリングを通じてブランドの核となる価値を明確にし、視覚的な表現へと落とし込みました。", gallery: [{ gradient: "linear-gradient(135deg, #ccff00 0%, #3a5a1a 100%)", caption: "ロゴデザイン" }, { gradient: "linear-gradient(135deg, #2a4a0a 0%, #ccff00 100%)", caption: "名刺デザイン" }, { gradient: "linear-gradient(135deg, #ccff00 0%, #1a2e1a 50%, #ccff00 100%)", caption: "ブランドガイドライン" }] },
+  { id: "corporate-website", title: "Corporate Website", category: "web", categoryLabel: "Web Design", gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)", year: "2025", client: "Sample Client B", role: "Web Design / Frontend Development", description: "コーポレートサイトのフルリニューアルプロジェクト。ユーザビリティとブランドイメージの両立を実現し、モダンなデザインと高いパフォーマンスを兼ね備えたサイトを構築しました。レスポンシブ対応はもちろん、アクセシビリティにも配慮した設計を行いました。", gallery: [{ gradient: "linear-gradient(135deg, #667eea 0%, #5a3e9a 100%)", caption: "トップページ" }, { gradient: "linear-gradient(135deg, #764ba2 0%, #667eea 100%)", caption: "サービスページ" }, { gradient: "linear-gradient(135deg, #5a3e9a 0%, #8b6ec0 100%)", caption: "モバイル版" }] },
+  { id: "visual-campaign", title: "Visual Campaign", category: "graphic", categoryLabel: "Graphic Design", gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)", year: "2025", client: "Sample Client C", role: "Art Direction / Graphic Design", description: "大規模キャンペーンのビジュアル制作を担当。コンセプト策定からメインビジュアルの制作、各メディアへの展開まで一貫して手がけました。ターゲット層に響くクリエイティブで、キャンペーンの認知度向上に貢献しました。", gallery: [{ gradient: "linear-gradient(135deg, #f093fb 0%, #e04060 100%)", caption: "メインビジュアル" }, { gradient: "linear-gradient(135deg, #f5576c 0%, #f093fb 100%)", caption: "SNS展開" }, { gradient: "linear-gradient(135deg, #e04060 0%, #f093fb 50%, #f5576c 100%)", caption: "印刷物" }] },
+  { id: "mobile-app", title: "Mobile App Design", category: "uiux", categoryLabel: "UI/UX", gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)", year: "2024", client: "Sample Client D", role: "UI/UX Design / Prototyping", description: "モバイルアプリのUI/UXデザインプロジェクト。ユーザーリサーチから情報設計、プロトタイピングまでの全工程を担当。直感的な操作性と美しいビジュアルを両立させたデザインを実現しました。", gallery: [{ gradient: "linear-gradient(135deg, #4facfe 0%, #00c8fe 100%)", caption: "ホーム画面" }, { gradient: "linear-gradient(135deg, #00f2fe 0%, #4facfe 100%)", caption: "詳細画面" }, { gradient: "linear-gradient(135deg, #00c8fe 0%, #00f2fe 50%, #4facfe 100%)", caption: "設定画面" }] },
+  { id: "logo-collection", title: "Logo Collection", category: "graphic", categoryLabel: "Graphic Design", gradient: "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)", year: "2024", client: "Various Clients", role: "Logo Design / Brand Mark Design", description: "様々な業種のクライアント向けに制作したロゴデザインのコレクション。それぞれのブランドの個性や価値観を反映した、オリジナリティ溢れるデザインを提供しました。", gallery: [{ gradient: "linear-gradient(135deg, #a8edea 0%, #c0ddd0 100%)", caption: "ロゴマーク集 Vol.1" }, { gradient: "linear-gradient(135deg, #fed6e3 0%, #a8edea 100%)", caption: "ロゴマーク集 Vol.2" }, { gradient: "linear-gradient(135deg, #c0ddd0 0%, #fed6e3 100%)", caption: "ロゴタイプ集" }] },
+  { id: "packaging-design", title: "Packaging Design", category: "branding", categoryLabel: "Branding", gradient: "linear-gradient(135deg, #fccb90 0%, #d57eeb 100%)", year: "2024", client: "Sample Client F", role: "Packaging Design / Brand Guide", description: "商品パッケージのデザインとブランドガイドラインの策定。店頭での視認性とブランドの世界観を両立させたパッケージデザインを制作しました。素材選定から印刷管理まで一貫して対応しました。", gallery: [{ gradient: "linear-gradient(135deg, #fccb90 0%, #c060d0 100%)", caption: "パッケージ正面" }, { gradient: "linear-gradient(135deg, #d57eeb 0%, #fccb90 100%)", caption: "パッケージ展開" }, { gradient: "linear-gradient(135deg, #c060d0 0%, #fccb90 50%, #d57eeb 100%)", caption: "ブランドガイド" }] },
+  { id: "ec-platform", title: "E-Commerce Platform", category: "web", categoryLabel: "Web Design", gradient: "linear-gradient(135deg, #0c3483 0%, #a2b6df 50%, #6b8cce 100%)", year: "2024", client: "Sample Client G", role: "Web Design / E-Commerce UX", description: "ECサイトのデザイン・構築プロジェクト。商品の魅力を最大限に伝えるビジュアルデザインと、スムーズな購入体験を実現するUX設計を行いました。売上向上に直結するUI改善も実施しました。", gallery: [{ gradient: "linear-gradient(135deg, #0c3483 0%, #6b8cce 100%)", caption: "トップページ" }, { gradient: "linear-gradient(135deg, #a2b6df 0%, #0c3483 100%)", caption: "商品ページ" }, { gradient: "linear-gradient(135deg, #6b8cce 0%, #a2b6df 100%)", caption: "カート・決済" }] },
+  { id: "editorial-design", title: "Editorial Design", category: "graphic", categoryLabel: "Graphic Design", gradient: "linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fdfcfb 100%)", year: "2024", client: "Sample Client H", role: "Editorial Design / Typography", description: "雑誌・エディトリアルデザインのプロジェクト。読みやすさと美しさを両立したタイポグラフィとレイアウトで、コンテンツの魅力を最大限に引き出しました。", gallery: [{ gradient: "linear-gradient(135deg, #ff9a9e 0%, #e8a0a0 100%)", caption: "表紙デザイン" }, { gradient: "linear-gradient(135deg, #fecfef 0%, #ff9a9e 100%)", caption: "誌面レイアウト" }, { gradient: "linear-gradient(135deg, #fdfcfb 0%, #fecfef 100%)", caption: "タイポグラフィ" }] },
+  { id: "dashboard", title: "Dashboard Design", category: "uiux", categoryLabel: "UI/UX", gradient: "linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%)", year: "2023", client: "Sample Client I", role: "UI/UX Design / Data Visualization", description: "管理画面のUI/UXデザイン。複雑なデータを直感的に把握できるダッシュボードを設計しました。データビジュアライゼーションにより、意思決定を支援するインターフェースを実現しました。", gallery: [{ gradient: "linear-gradient(135deg, #a18cd1 0%, #d0a0e8 100%)", caption: "ダッシュボード" }, { gradient: "linear-gradient(135deg, #fbc2eb 0%, #a18cd1 100%)", caption: "分析画面" }, { gradient: "linear-gradient(135deg, #d0a0e8 0%, #fbc2eb 100%)", caption: "レポート画面" }] },
+  { id: "restaurant-branding", title: "Restaurant Branding", category: "branding", categoryLabel: "Branding", gradient: "linear-gradient(135deg, #f6d365 0%, #fda085 100%)", year: "2023", client: "Sample Client J", role: "Branding / Menu Design / Space Design", description: "飲食店の総合ブランディングプロジェクト。ロゴ、メニュー、店舗空間のデザインを一貫して担当し、ブランドの世界観を統一しました。ターゲット層のライフスタイルに寄り添ったデザインを提供しました。", gallery: [{ gradient: "linear-gradient(135deg, #f6d365 0%, #e89060 100%)", caption: "ロゴ＆サイン" }, { gradient: "linear-gradient(135deg, #fda085 0%, #f6d365 100%)", caption: "メニューデザイン" }, { gradient: "linear-gradient(135deg, #e89060 0%, #fda085 100%)", caption: "店舗サイン" }] },
+  { id: "portfolio-site", title: "Portfolio Site", category: "web", categoryLabel: "Web Design", gradient: "linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%)", year: "2023", client: "Sample Client K", role: "Web Design / Development", description: "個人ポートフォリオサイトのデザイン・開発。クリエイターの個性と作品を最大限に引き立てるミニマルなデザインを採用。パフォーマンスとアニメーションにこだわった制作を行いました。", gallery: [{ gradient: "linear-gradient(135deg, #89f7fe 0%, #5090e8 100%)", caption: "トップページ" }, { gradient: "linear-gradient(135deg, #66a6ff 0%, #89f7fe 100%)", caption: "作品ページ" }, { gradient: "linear-gradient(135deg, #5090e8 0%, #66a6ff 100%)", caption: "プロフィール" }] },
+  { id: "poster-series", title: "Poster Series", category: "graphic", categoryLabel: "Graphic Design", gradient: "linear-gradient(135deg, #c471f5 0%, #fa71cd 100%)", year: "2023", client: "Sample Client L", role: "Art Direction / Poster Design", description: "イベント向けポスターシリーズのデザイン。コンセプトの立案からビジュアル制作まで一貫して担当。インパクトのあるグラフィックで、イベントの世界観を視覚的に表現しました。", gallery: [{ gradient: "linear-gradient(135deg, #c471f5 0%, #d050b0 100%)", caption: "ポスター Vol.1" }, { gradient: "linear-gradient(135deg, #fa71cd 0%, #c471f5 100%)", caption: "ポスター Vol.2" }, { gradient: "linear-gradient(135deg, #d050b0 0%, #fa71cd 100%)", caption: "ポスター Vol.3" }] },
 ];
+
+// Synchronous export for backward compatibility
+export const worksData = fallbackWorksData;

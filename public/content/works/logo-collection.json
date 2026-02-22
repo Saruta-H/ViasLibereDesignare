@@ -1,0 +1,25 @@
+{
+  "id": "logo-collection",
+  "title": "Logo Collection",
+  "category": "graphic",
+  "categoryLabel": "Graphic Design",
+  "gradient": "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)",
+  "year": "2024",
+  "client": "Various Clients",
+  "role": "Logo Design / Brand Mark Design",
+  "description": "様々な業種のクライアント向けに制作したロゴデザインのコレクション。それぞれのブランドの個性や価値観を反映した、オリジナリティ溢れるデザインを提供しました。",
+  "gallery": [
+    {
+      "gradient": "linear-gradient(135deg, #a8edea 0%, #c0ddd0 100%)",
+      "caption": "ロゴマーク集 Vol.1"
+    },
+    {
+      "gradient": "linear-gradient(135deg, #fed6e3 0%, #a8edea 100%)",
+      "caption": "ロゴマーク集 Vol.2"
+    },
+    {
+      "gradient": "linear-gradient(135deg, #c0ddd0 0%, #fed6e3 100%)",
+      "caption": "ロゴタイプ集"
+    }
+  ]
+}

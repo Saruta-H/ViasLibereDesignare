@@ -1,0 +1,25 @@
+{
+  "id": "ec-platform",
+  "title": "E-Commerce Platform",
+  "category": "web",
+  "categoryLabel": "Web Design",
+  "gradient": "linear-gradient(135deg, #0c3483 0%, #a2b6df 50%, #6b8cce 100%)",
+  "year": "2024",
+  "client": "Sample Client G",
+  "role": "Web Design / E-Commerce UX",
+  "description": "ECサイトのデザイン・構築プロジェクト。商品の魅力を最大限に伝えるビジュアルデザインと、スムーズな購入体験を実現するUX設計を行いました。売上向上に直結するUI改善も実施しました。",
+  "gallery": [
+    {
+      "gradient": "linear-gradient(135deg, #0c3483 0%, #6b8cce 100%)",
+      "caption": "トップページ"
+    },
+    {
+      "gradient": "linear-gradient(135deg, #a2b6df 0%, #0c3483 100%)",
+      "caption": "商品ページ"
+    },
+    {
+      "gradient": "linear-gradient(135deg, #6b8cce 0%, #a2b6df 100%)",
+      "caption": "カート・決済"
+    }
+  ]
+}

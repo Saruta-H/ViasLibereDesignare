@@ -1,0 +1,25 @@
+{
+  "id": "brand-identity",
+  "title": "Brand Identity Design",
+  "category": "branding",
+  "categoryLabel": "Branding",
+  "gradient": "linear-gradient(135deg, #ccff00 0%, #1a2e1a 100%)",
+  "year": "2025",
+  "client": "Sample Client A",
+  "role": "Brand Strategy / Logo Design / VI Design",
+  "description": "企業の本質を捉えたブランドアイデンティティを構築。ロゴデザインからVI（ビジュアルアイデンティティ）システム全体の設計まで、一貫したブランド体験を創出しました。市場調査やヒアリングを通じてブランドの核となる価値を明確にし、視覚的な表現へと落とし込みました。",
+  "gallery": [
+    {
+      "gradient": "linear-gradient(135deg, #ccff00 0%, #3a5a1a 100%)",
+      "caption": "ロゴデザイン"
+    },
+    {
+      "gradient": "linear-gradient(135deg, #2a4a0a 0%, #ccff00 100%)",
+      "caption": "名刺デザイン"
+    },
+    {
+      "gradient": "linear-gradient(135deg, #ccff00 0%, #1a2e1a 50%, #ccff00 100%)",
+      "caption": "ブランドガイドライン"
+    }
+  ]
+}

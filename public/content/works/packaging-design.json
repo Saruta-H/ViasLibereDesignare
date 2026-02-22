@@ -1,0 +1,25 @@
+{
+  "id": "packaging-design",
+  "title": "Packaging Design",
+  "category": "branding",
+  "categoryLabel": "Branding",
+  "gradient": "linear-gradient(135deg, #fccb90 0%, #d57eeb 100%)",
+  "year": "2024",
+  "client": "Sample Client F",
+  "role": "Packaging Design / Brand Guide",
+  "description": "商品パッケージのデザインとブランドガイドラインの策定。店頭での視認性とブランドの世界観を両立させたパッケージデザインを制作しました。素材選定から印刷管理まで一貫して対応しました。",
+  "gallery": [
+    {
+      "gradient": "linear-gradient(135deg, #fccb90 0%, #c060d0 100%)",
+      "caption": "パッケージ正面"
+    },
+    {
+      "gradient": "linear-gradient(135deg, #d57eeb 0%, #fccb90 100%)",
+      "caption": "パッケージ展開"
+    },
+    {
+      "gradient": "linear-gradient(135deg, #c060d0 0%, #fccb90 50%, #d57eeb 100%)",
+      "caption": "ブランドガイド"
+    }
+  ]
+}

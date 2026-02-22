@@ -1,0 +1,51 @@
+backend:
+  name: github
+  repo: Saruta-H/ViasLibereDesignare
+  branch: main
+  base_url: https://sveltia-cms-auth.netlify.app
+
+media_folder: public/uploads
+public_folder: /uploads
+
+collections:
+  - name: works
+    label: 作品一覧
+    folder: public/content/works
+    create: true
+    slug: "{{slug}}"
+    extension: json
+    format: json
+    fields:
+      - { label: "ID（英数字・ハイフン）", name: id, widget: string }
+      - { label: "タイトル", name: title, widget: string }
+      - label: "カテゴリ"
+        name: category
+        widget: select
+        options:
+          - { label: "Graphic Design", value: graphic }
+          - { label: "Web Design", value: web }
+          - { label: "Branding", value: branding }
+          - { label: "UI/UX", value: uiux }
+      - { label: "カテゴリ表示名", name: categoryLabel, widget: string }
+      - {
+          label: "グラデーション CSS",
+          name: gradient,
+          widget: string,
+          hint: "例: linear-gradient(135deg, #ccff00 0%, #1a2e1a 100%)",
+        }
+      - { label: "年", name: year, widget: string }
+      - { label: "クライアント", name: client, widget: string }
+      - { label: "役割", name: role, widget: string }
+      - { label: "説明文", name: description, widget: text }
+      - label: "ギャラリー"
+        name: gallery
+        widget: list
+        fields:
+          - { label: "グラデーション CSS", name: gradient, widget: string }
+          - { label: "キャプション", name: caption, widget: string }
+      - {
+          label: "サムネイル画像",
+          name: thumbnail,
+          widget: image,
+          required: false,
+        }

@@ -1,0 +1,25 @@
+{
+  "id": "portfolio-site",
+  "title": "Portfolio Site",
+  "category": "web",
+  "categoryLabel": "Web Design",
+  "gradient": "linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%)",
+  "year": "2023",
+  "client": "Sample Client K",
+  "role": "Web Design / Development",
+  "description": "個人ポートフォリオサイトのデザイン・開発。クリエイターの個性と作品を最大限に引き立てるミニマルなデザインを採用。パフォーマンスとアニメーションにこだわった制作を行いました。",
+  "gallery": [
+    {
+      "gradient": "linear-gradient(135deg, #89f7fe 0%, #5090e8 100%)",
+      "caption": "トップページ"
+    },
+    {
+      "gradient": "linear-gradient(135deg, #66a6ff 0%, #89f7fe 100%)",
+      "caption": "作品ページ"
+    },
+    {
+      "gradient": "linear-gradient(135deg, #5090e8 0%, #66a6ff 100%)",
+      "caption": "プロフィール"
+    }
+  ]
+}

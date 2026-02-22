@@ -1,0 +1,25 @@
+{
+  "id": "visual-campaign",
+  "title": "Visual Campaign",
+  "category": "graphic",
+  "categoryLabel": "Graphic Design",
+  "gradient": "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
+  "year": "2025",
+  "client": "Sample Client C",
+  "role": "Art Direction / Graphic Design",
+  "description": "大規模キャンペーンのビジュアル制作を担当。コンセプト策定からメインビジュアルの制作、各メディアへの展開まで一貫して手がけました。ターゲット層に響くクリエイティブで、キャンペーンの認知度向上に貢献しました。",
+  "gallery": [
+    {
+      "gradient": "linear-gradient(135deg, #f093fb 0%, #e04060 100%)",
+      "caption": "メインビジュアル"
+    },
+    {
+      "gradient": "linear-gradient(135deg, #f5576c 0%, #f093fb 100%)",
+      "caption": "SNS展開"
+    },
+    {
+      "gradient": "linear-gradient(135deg, #e04060 0%, #f093fb 50%, #f5576c 100%)",
+      "caption": "印刷物"
+    }
+  ]
+}

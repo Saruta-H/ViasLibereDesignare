@@ -1,0 +1,25 @@
+{
+  "id": "mobile-app",
+  "title": "Mobile App Design",
+  "category": "uiux",
+  "categoryLabel": "UI/UX",
+  "gradient": "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
+  "year": "2024",
+  "client": "Sample Client D",
+  "role": "UI/UX Design / Prototyping",
+  "description": "モバイルアプリのUI/UXデザインプロジェクト。ユーザーリサーチから情報設計、プロトタイピングまでの全工程を担当。直感的な操作性と美しいビジュアルを両立させたデザインを実現しました。",
+  "gallery": [
+    {
+      "gradient": "linear-gradient(135deg, #4facfe 0%, #00c8fe 100%)",
+      "caption": "ホーム画面"
+    },
+    {
+      "gradient": "linear-gradient(135deg, #00f2fe 0%, #4facfe 100%)",
+      "caption": "詳細画面"
+    },
+    {
+      "gradient": "linear-gradient(135deg, #00c8fe 0%, #00f2fe 50%, #4facfe 100%)",
+      "caption": "設定画面"
+    }
+  ]
+}

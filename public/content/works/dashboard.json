@@ -1,0 +1,25 @@
+{
+  "id": "dashboard",
+  "title": "Dashboard Design",
+  "category": "uiux",
+  "categoryLabel": "UI/UX",
+  "gradient": "linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%)",
+  "year": "2023",
+  "client": "Sample Client I",
+  "role": "UI/UX Design / Data Visualization",
+  "description": "管理画面のUI/UXデザイン。複雑なデータを直感的に把握できるダッシュボードを設計しました。データビジュアライゼーションにより、意思決定を支援するインターフェースを実現しました。",
+  "gallery": [
+    {
+      "gradient": "linear-gradient(135deg, #a18cd1 0%, #d0a0e8 100%)",
+      "caption": "ダッシュボード"
+    },
+    {
+      "gradient": "linear-gradient(135deg, #fbc2eb 0%, #a18cd1 100%)",
+      "caption": "分析画面"
+    },
+    {
+      "gradient": "linear-gradient(135deg, #d0a0e8 0%, #fbc2eb 100%)",
+      "caption": "レポート画面"
+    }
+  ]
+}
