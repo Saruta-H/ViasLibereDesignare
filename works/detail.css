@@ -319,8 +319,12 @@
 }
 
 @media (max-width: 768px) {
-  .detail-hero.is-fallback {
-    min-height: 50vh;
+  .detail-hero {
+    min-height: 65vh;
+  }
+
+  .detail-hero-img {
+    height: 100%;
   }
 
   .detail-hero-content {
