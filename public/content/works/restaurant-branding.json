@@ -1,25 +1,29 @@
 {
-  "id": "restaurant-branding",
-  "title": "Restaurant Branding",
-  "category": "branding",
-  "categoryLabel": "Branding",
+  "id": "Pococha",
+  "title": "Pococha ライバーシティー",
+  "category": "web",
+  "categoryLabel": "Web Design",
   "gradient": "linear-gradient(135deg, #f6d365 0%, #fda085 100%)",
-  "year": "2023",
-  "client": "Sample Client J",
-  "role": "Branding / Menu Design / Space Design",
-  "description": "飲食店の総合ブランディングプロジェクト。ロゴ、メニュー、店舗空間のデザインを一貫して担当し、ブランドの世界観を統一しました。ターゲット層のライフスタイルに寄り添ったデザインを提供しました。",
+  "year": "2020",
+  "client": "株式会社DeNA",
+  "role": "Web Design",
+  "description": "■ Design Concept\nLIVEコミュニケーションアプリ「Pococha」のキャンペーンサイトと動画広告を制作させていただきました。\n\nタイトルのライバーシティに合わせて、ライバーの多様性を表現するため、街並みを意識したデザインで制作しました。\n実際に活動している人気ライバー20人へのインタビューをもとにしたライバー紹介ページでは、各ライバーの個性が伝わるよう、キャッチコピーにもこだわりました。\n\nまた、自分がどのタイプのライバーに適しているかわかる診断メーカーも制作し、SNSに拡散されやすいような画面設計・デザインをしました。\n\n■ 制作期間： 約3ヶ月\n■ 使用ツール： Illustrator, Photoshop\n■ 担当領域： Webデザインアシスタント",
   "gallery": [
     {
+      "image": "/uploads/00_b.jpg",
       "gradient": "linear-gradient(135deg, #f6d365 0%, #e89060 100%)",
-      "caption": "ロゴ＆サイン"
+      "caption": "ロゴ"
     },
     {
+      "image": "/uploads/01_d.jpg",
       "gradient": "linear-gradient(135deg, #fda085 0%, #f6d365 100%)",
-      "caption": "メニューデザイン"
+      "caption": "トップページ"
     },
     {
+      "image": "/uploads/02_d.jpg",
       "gradient": "linear-gradient(135deg, #e89060 0%, #fda085 100%)",
-      "caption": "店舗サイン"
+      "caption": "詳細ページ"
     }
-  ]
+  ],
+  "thumbnail": "/uploads/00_b.jpg"
 }
