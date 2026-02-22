@@ -10,19 +10,30 @@ const BASE = import.meta.env.BASE_URL || '/';
  * First tries to load the index, then fetches individual files.
  */
 export async function loadWorksData() {
+  let works = [];
   try {
     // Try loading the pre-built index first
     const indexRes = await fetch(`${BASE}content/works/index.json`);
     if (indexRes.ok) {
-      const index = await indexRes.json();
-      return index;
+      works = await indexRes.json();
     }
   } catch (e) {
-    // Fall through to individual file loading
+    // Fall through to fallback
   }
 
-  // Fallback: load from known file list
-  return fallbackWorksData;
+  if (!works || works.length === 0) {
+    works = [...fallbackWorksData];
+  }
+
+  // Sort by year (descending), then by ID (descending) as a secondary sort
+  return works.sort((a, b) => {
+    const yearA = parseInt(a.year) || 0;
+    const yearB = parseInt(b.year) || 0;
+    if (yearB !== yearA) {
+      return yearB - yearA;
+    }
+    return (b.id || "").localeCompare(a.id || "");
+  });
 }
 
 // Fallback static data (used when JSON files are not available)
