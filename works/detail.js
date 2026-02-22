@@ -1,23 +1,23 @@
 /* ============================================
    Work Detail Page — JavaScript
    ============================================ */
-import { worksData } from "./data.js";
+import { loadWorksData } from "./data.js";
 
-// --- Get work ID from URL ---
-const params = new URLSearchParams(window.location.search);
-const workId = params.get("id");
+const BASE = import.meta.env.BASE_URL || '/';
 
-// --- Find work data ---
-const work = worksData.find((w) => w.id === workId);
+// --- Initialize Detail Page dynamically ---
+async function initDetail() {
+  const params = new URLSearchParams(window.location.search);
+  const workId = params.get("id");
 
-if (!work) {
-  // Fallback: redirect to works list
-  window.location.href = "/ViasLibereDesignare/works/";
-}
+  const worksDataList = await loadWorksData();
+  const work = worksDataList.find((w) => w.id === workId);
 
-// --- Populate page ---
-function populatePage() {
-  if (!work) return;
+  if (!work) {
+    // Fallback: redirect to works list
+    window.location.href = `${BASE}works/`;
+    return;
+  }
 
   // Meta
   document.title = `${work.title} | ViasLibereDesignare`;
@@ -26,9 +26,16 @@ function populatePage() {
 
   // Hero
   const heroBg = document.getElementById("detail-hero-bg");
-  heroBg.style.background = work.gradient;
+  const thumbPath = work.thumbnail && work.thumbnail.startsWith('/') ? work.thumbnail.slice(1) : work.thumbnail;
+  if (thumbPath) {
+    heroBg.style.backgroundImage = `url('${BASE}${thumbPath}')`;
+    heroBg.style.backgroundSize = "cover";
+    heroBg.style.backgroundPosition = "center";
+  } else {
+    heroBg.style.background = work.gradient;
+  }
 
-  document.getElementById("detail-category").textContent = work.categoryLabel;
+  document.getElementById("detail-category").textContent = work.categoryLabel || work.category;
   document.getElementById("detail-title").textContent = work.title;
 
   // Info
@@ -39,24 +46,27 @@ function populatePage() {
 
   // Gallery
   const galleryContainer = document.getElementById("detail-gallery");
-  work.gallery.forEach((item) => {
-    const div = document.createElement("div");
-    div.className = "detail-gallery-item";
-    div.innerHTML = `
-      <div class="detail-gallery-image" style="background: ${item.gradient}"></div>
-      <span class="detail-gallery-caption">${item.caption}</span>
-    `;
-    galleryContainer.appendChild(div);
-  });
+  if (work.gallery && work.gallery.length > 0) {
+    work.gallery.forEach((item) => {
+      const div = document.createElement("div");
+      div.className = "detail-gallery-item";
+      // Update this later if gallery accepts images
+      div.innerHTML = `
+        <div class="detail-gallery-image" style="background: ${item.gradient}"></div>
+        <span class="detail-gallery-caption">${item.caption}</span>
+      `;
+      galleryContainer.appendChild(div);
+    });
+  }
 
   // Related works (same category, excluding current)
-  const related = worksData
+  const related = worksDataList
     .filter((w) => w.category === work.category && w.id !== work.id)
     .slice(0, 3);
 
   // If not enough same-category works, fill with others
   if (related.length < 3) {
-    const others = worksData
+    const others = worksDataList
       .filter((w) => w.id !== work.id && !related.includes(w))
       .slice(0, 3 - related.length);
     related.push(...others);
@@ -67,10 +77,16 @@ function populatePage() {
     const a = document.createElement("a");
     a.className = "detail-related-item";
     a.href = `detail.html?id=${item.id}`;
+    
+    const relThumbPath = item.thumbnail && item.thumbnail.startsWith('/') ? item.thumbnail.slice(1) : item.thumbnail;
+    const bgStyle = relThumbPath
+      ? `background-image: url('${BASE}${relThumbPath}'); background-size: cover; background-position: center;`
+      : `background: ${item.gradient}`;
+    
     a.innerHTML = `
-      <div class="detail-related-image" style="background: ${item.gradient}">
+      <div class="detail-related-image" style="${bgStyle}">
         <div class="detail-related-overlay">
-          <span class="detail-related-category">${item.categoryLabel}</span>
+          <span class="detail-related-category">${item.categoryLabel || item.category}</span>
           <span class="detail-related-name">${item.title}</span>
         </div>
       </div>
@@ -79,7 +95,10 @@ function populatePage() {
   });
 }
 
-populatePage();
+// Call init function on load
+document.addEventListener("DOMContentLoaded", () => {
+  initDetail();
+});
 
 // --- Loader ---
 const loader = document.getElementById("loader");

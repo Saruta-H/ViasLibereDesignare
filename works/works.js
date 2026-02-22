@@ -116,49 +116,104 @@ const revealObserver = new IntersectionObserver(
 
 revealElements.forEach((el) => revealObserver.observe(el));
 
-// --- Works Filter ---
-const filterBtns = document.querySelectorAll(".filter-btn");
-const workItems = document.querySelectorAll(".work-item");
+// --- Initialize Works Page dynamically ---
+import { loadWorksData, renderWorkCard } from "./data.js";
 
-filterBtns.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    const filter = btn.getAttribute("data-filter");
+async function initWorksPage() {
+  const worksGrid = document.getElementById("works-grid");
+  if (!worksGrid) return;
+  
+  const worksDataList = await loadWorksData();
+  
+  let html = "";
+  worksDataList.forEach((work, index) => {
+    // Add large class dynamically based on index pattern (e.g. 2, 6, 11) to keep the varied layout
+    const isLargePattern = [2, 6, 11].includes(index % 12);
+    // Render HTML directly but adjust paths for local (data.js returns absolute paths relative to root)
+    // Actually renderWorkCard handles it by using BASE.
+    let cardHTML = renderWorkCard(work, isLargePattern);
+    
+    // In works/index.html we shouldn't have nested base path if it's already there, but renderWorkCard prepends BASE.
+    // That's fine since we're in /ViasLibereDesignare/works/. BASE is /ViasLibereDesignare/. So /ViasLibereDesignare/works/detail.html is correct.
+    
+    html += cardHTML;
+  });
+  
+  worksGrid.innerHTML = html;
+  
+  // Re-observe items for reveal animation
+  const newWorkItems = worksGrid.querySelectorAll(".work-item");
+  newWorkItems.forEach((el) => {
+    revealObserver.observe(el);
+  });
 
-    // Update active state
-    filterBtns.forEach((b) => b.classList.remove("active"));
-    btn.classList.add("active");
-
-    // Filter items
-    workItems.forEach((item) => {
-      const category = item.getAttribute("data-category");
-      if (filter === "all" || category === filter) {
-        item.classList.remove("hidden");
-        item.style.position = "";
-      } else {
-        item.classList.add("hidden");
-        setTimeout(() => {
-          if (item.classList.contains("hidden")) {
-            item.style.position = "absolute";
-          }
-        }, 500);
-      }
+  // Re-apply hover animations
+  const hoverTargets = worksGrid.querySelectorAll(".work-item");
+  hoverTargets.forEach((el) => {
+    el.addEventListener("mouseenter", () => {
+      cursor.classList.add("active");
+      cursorFollower.classList.add("active");
+    });
+    el.addEventListener("mouseleave", () => {
+      cursor.classList.remove("active");
+      cursorFollower.classList.remove("active");
     });
   });
-});
 
-// --- Work Items Hover Scale ---
-workItems.forEach((item) => {
-  const image = item.querySelector(".work-image");
-  if (image) {
-    item.addEventListener("mousemove", (e) => {
-      const rect = item.getBoundingClientRect();
-      const x = (e.clientX - rect.left) / rect.width;
-      const y = (e.clientY - rect.top) / rect.height;
-      image.style.transform = `scale(1.03) translate(${(x - 0.5) * -6}px, ${(y - 0.5) * -6}px)`;
-    });
+  // Re-apply hover scale transformation logic
+  newWorkItems.forEach((item) => {
+    const image = item.querySelector(".work-image");
+    if (image) {
+      item.addEventListener("mousemove", (e) => {
+        const rect = item.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width;
+        const y = (e.clientY - rect.top) / rect.height;
+        image.style.transform = `scale(1.03) translate(${(x - 0.5) * -6}px, ${(y - 0.5) * -6}px)`;
+      });
 
-    item.addEventListener("mouseleave", () => {
-      image.style.transform = "";
+      item.addEventListener("mouseleave", () => {
+        image.style.transform = "";
+      });
+    }
+  });
+
+  // Filter initialization
+  const filterBtns = document.querySelectorAll(".filter-btn");
+  if (filterBtns.length > 0) {
+    const freshWorkItems = worksGrid.querySelectorAll(".work-item");
+    filterBtns.forEach((btn) => {
+      const newBtn = btn.cloneNode(true);
+      btn.parentNode.replaceChild(newBtn, btn);
+      
+      newBtn.addEventListener("click", () => {
+        const filter = newBtn.getAttribute("data-filter");
+
+        // Update active state
+        const updatedBtns = document.querySelectorAll(".filter-btn");
+        updatedBtns.forEach((b) => b.classList.remove("active"));
+        newBtn.classList.add("active");
+
+        // Filter items
+        freshWorkItems.forEach((item) => {
+          const category = item.getAttribute("data-category");
+          if (filter === "all" || category === filter) {
+            item.classList.remove("hidden");
+            item.style.position = "";
+          } else {
+            item.classList.add("hidden");
+            setTimeout(() => {
+              if (item.classList.contains("hidden")) {
+                item.style.position = "absolute";
+              }
+            }, 500);
+          }
+        });
+      });
     });
   }
+}
+
+// Call init function on load
+document.addEventListener("DOMContentLoaded", () => {
+  initWorksPage();
 });

@@ -194,6 +194,106 @@ function animateCounter(element, target) {
   update();
 }
 
+// --- Initialize Top Page Works dynamically ---
+import { loadWorksData, renderWorkCard } from "./works/data.js";
+
+async function initTopWorks() {
+  const worksGrid = document.getElementById("works-grid");
+  if (!worksGrid) return;
+  
+  const worksDataList = await loadWorksData();
+  
+  // Get at most 6 items for top page (e.g., from an array of works)
+  const topWorks = worksDataList.slice(0, 6);
+  
+  let html = "";
+  topWorks.forEach((work, index) => {
+    // Make every 3rd item large for layout variety as in original
+    const isLarge = index === 2;
+    html += renderWorkCard(work, isLarge);
+  });
+  
+  worksGrid.innerHTML = html;
+  
+  // Re-observe items for reveal animation
+  const newWorkItems = worksGrid.querySelectorAll(".work-item");
+  newWorkItems.forEach((el) => {
+    revealObserver.observe(el);
+  });
+
+  // Re-apply hover animations
+  const hoverTargets = worksGrid.querySelectorAll(".work-item, .service-row");
+  hoverTargets.forEach((el) => {
+    el.addEventListener("mouseenter", () => {
+      cursor.classList.add("active");
+      cursorFollower.classList.add("active");
+    });
+    el.addEventListener("mouseleave", () => {
+      cursor.classList.remove("active");
+      cursorFollower.classList.remove("active");
+    });
+  });
+
+  // Re-apply hover scale transformation logic
+  newWorkItems.forEach((item) => {
+    const image = item.querySelector(".work-image");
+    if (image) {
+      item.addEventListener("mousemove", (e) => {
+        const rect = item.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width;
+        const y = (e.clientY - rect.top) / rect.height;
+        image.style.transform = `scale(1.03) translate(${(x - 0.5) * -6}px, ${(y - 0.5) * -6}px)`;
+      });
+
+      item.addEventListener("mouseleave", () => {
+        image.style.transform = "";
+      });
+    }
+  });
+
+  // Filter initialization
+  const filterBtns = document.querySelectorAll(".filter-btn");
+  if (filterBtns.length > 0) {
+    const freshWorkItems = worksGrid.querySelectorAll(".work-item");
+    filterBtns.forEach((btn) => {
+      // Re-add event listeners if needed (wait, original ones are already bound but don't close over freshWorkItems, so we must replace logic or bind dynamically)
+      // Actually simpler: bind here using fresh elements
+      const newBtn = btn.cloneNode(true);
+      btn.parentNode.replaceChild(newBtn, btn);
+      
+      newBtn.addEventListener("click", () => {
+        const filter = newBtn.getAttribute("data-filter");
+
+        // Update active state
+        const updatedBtns = document.querySelectorAll(".filter-btn");
+        updatedBtns.forEach((b) => b.classList.remove("active"));
+        newBtn.classList.add("active");
+
+        // Filter items
+        freshWorkItems.forEach((item) => {
+          const category = item.getAttribute("data-category");
+          if (filter === "all" || category === filter) {
+            item.classList.remove("hidden");
+            item.style.position = "";
+          } else {
+            item.classList.add("hidden");
+            setTimeout(() => {
+              if (item.classList.contains("hidden")) {
+                item.style.position = "absolute";
+              }
+            }, 500);
+          }
+        });
+      });
+    });
+  }
+}
+
+// Call init function on load
+document.addEventListener("DOMContentLoaded", () => {
+  initTopWorks();
+});
+
 // --- Works Filter ---
 const filterBtns = document.querySelectorAll(".filter-btn");
 const workItems = document.querySelectorAll(".work-item");

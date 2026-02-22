@@ -43,3 +43,29 @@ export const fallbackWorksData = [
 
 // Synchronous export for backward compatibility
 export const worksData = fallbackWorksData;
+
+/**
+ * HTML template generator for a single work card
+ * @param {Object} work - Work data object
+ * @param {boolean} isLarge - Whether the card should span 2 columns
+ * @returns {string} HTML string for the work card
+ */
+export function renderWorkCard(work, isLarge = false) {
+  const largeClass = isLarge ? " large" : "";
+  const thumbPath = work.thumbnail && work.thumbnail.startsWith('/') ? work.thumbnail.slice(1) : work.thumbnail;
+  const bgStyle = thumbPath
+    ? `background-image: url('${BASE}${thumbPath}'); background-size: cover; background-position: center;`
+    : `--gradient: ${work.gradient || "linear-gradient(135deg, #1a1a1a 0%, #333 100%)"};`;
+
+  return `
+    <a href="${BASE}works/detail.html?id=${work.id}" class="work-item${largeClass}" data-category="${work.category}" data-reveal>
+      <div class="work-image" style="${bgStyle}">
+        <div class="work-overlay">
+          <span class="work-category">${work.categoryLabel || work.category}</span>
+          <h3 class="work-title">${work.title}</h3>
+          <p class="work-desc">${work.description ? work.description.substring(0, 40) + '...' : ''}</p>
+        </div>
+      </div>
+    </a>
+  `;
+}
