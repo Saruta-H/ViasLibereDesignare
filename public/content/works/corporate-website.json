@@ -1,25 +1,19 @@
 {
-  "id": "corporate-website",
-  "title": "Corporate Website",
-  "category": "web",
-  "categoryLabel": "Web Design",
+  "id": "nailsalonsoibelle",
+  "title": "nail salon soi belle",
+  "category": "graphic",
+  "categoryLabel": "Logo,Card Design",
   "gradient": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-  "year": "2025",
-  "client": "Sample Client B",
-  "role": "Web Design / Frontend Development",
+  "year": "2024",
+  "client": "nail salon soi belle",
+  "role": "Graphic Design",
   "description": "コーポレートサイトのフルリニューアルプロジェクト。ユーザビリティとブランドイメージの両立を実現し、モダンなデザインと高いパフォーマンスを兼ね備えたサイトを構築しました。レスポンシブ対応はもちろん、アクセシビリティにも配慮した設計を行いました。",
   "gallery": [
     {
+      "image": "/uploads/nail_salon.jpg",
       "gradient": "linear-gradient(135deg, #667eea 0%, #5a3e9a 100%)",
-      "caption": "トップページ"
-    },
-    {
-      "gradient": "linear-gradient(135deg, #764ba2 0%, #667eea 100%)",
-      "caption": "サービスページ"
-    },
-    {
-      "gradient": "linear-gradient(135deg, #5a3e9a 0%, #8b6ec0 100%)",
-      "caption": "モバイル版"
+      "caption": "ロゴ、名刺"
     }
-  ]
+  ],
+  "thumbnail": "/uploads/nail salon soi belle logo-01.jpg"
 }
