@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: Saruta-H/ViasLibereDesignare
+  repo: saruta-portfolio/ViasLibereDesignare
   branch: main
 
 media_folder: public/uploads
