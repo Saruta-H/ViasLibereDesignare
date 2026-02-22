@@ -1,25 +1,19 @@
 {
-  "id": "ec-platform",
-  "title": "E-Commerce Platform",
+  "id": "calbee",
+  "title": "calbee-ASMR",
   "category": "web",
   "categoryLabel": "Web Design",
   "gradient": "linear-gradient(135deg, #0c3483 0%, #a2b6df 50%, #6b8cce 100%)",
-  "year": "2024",
-  "client": "Sample Client G",
-  "role": "Web Design / E-Commerce UX",
-  "description": "ECサイトのデザイン・構築プロジェクト。商品の魅力を最大限に伝えるビジュアルデザインと、スムーズな購入体験を実現するUX設計を行いました。売上向上に直結するUI改善も実施しました。",
+  "year": "2019",
+  "client": "カルビー株式会社",
+  "role": "Web Design",
+  "description": "■ Design Concept\n話題のASMRを活用した、コンテンツ開発のお手伝いをさせていただきました！\n\nおいしい商品たちが、食感キャラクターとしてコンテンツ化！\n指でタップすると「ザクッ ザクッ」と咀嚼音を鳴らし、触れた分だけ大きく成長。\n自分だけの食感キャラクター育成コンテンツの誕生です！\n\n■ 制作期間： 約3ヶ月\n■ 使用ツール： Illustrator, Photoshop\n■ 担当領域： Webデザイン",
   "gallery": [
     {
+      "image": "/uploads/03_b-1.jpg",
       "gradient": "linear-gradient(135deg, #0c3483 0%, #6b8cce 100%)",
-      "caption": "トップページ"
-    },
-    {
-      "gradient": "linear-gradient(135deg, #a2b6df 0%, #0c3483 100%)",
-      "caption": "商品ページ"
-    },
-    {
-      "gradient": "linear-gradient(135deg, #6b8cce 0%, #a2b6df 100%)",
-      "caption": "カート・決済"
+      "caption": "サイト一覧"
     }
-  ]
+  ],
+  "thumbnail": "/uploads/01-2.jpg"
 }
