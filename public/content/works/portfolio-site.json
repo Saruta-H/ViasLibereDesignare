@@ -4,10 +4,10 @@
   "category": "web",
   "categoryLabel": "Web Design",
   "gradient": "linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%)",
-  "year": "2023",
-  "client": "Sample Client K",
+  "year": "2026",
+  "client": "ViasLibereDesignare",
   "role": "Web Design / Development",
-  "description": "個人ポートフォリオサイトのデザイン・開発。クリエイターの個性と作品を最大限に引き立てるミニマルなデザインを採用。パフォーマンスとアニメーションにこだわった制作を行いました。",
+  "description": "個人ポートフォリオサイトのデザイン・開発をしました。\nクリエイターの個性と作品を最大限に引き立てるミニマルなデザインを採用しています。\nパフォーマンスとアニメーションにこだわった制作を行いました。\n\n■ 制作期間： 約1ヶ月\n■ 使用ツール： Figma,Antigravity,Github\n■ 担当領域： Webデザイン、コーディング、情報設計",
   "gallery": [
     {
       "gradient": "linear-gradient(135deg, #89f7fe 0%, #5090e8 100%)",
@@ -21,5 +21,6 @@
       "gradient": "linear-gradient(135deg, #5090e8 0%, #66a6ff 100%)",
       "caption": "プロフィール"
     }
-  ]
+  ],
+  "thumbnail": "/uploads/スクリーンショット 2026-02-22 18.45.00.png"
 }
