@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Work Detail | ViasLibereDesignare</title>
+    <meta name="description" content="ViasLibereDesignareの制作実績詳細。" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=LINE+Seed+JP:wght@100;300;400;700;800&family=Questrial&family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="./detail.css" />
+  </head>
+  <body>
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- Loader -->
+    <div class="loader" id="loader">
+      <div class="loader-inner">
+        <svg
+          class="loader-symbol"
+          viewBox="0 0 1000 1000"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <polygon
+            points="433.4 260.89 518.12 372.74 698.65 372.74 518.95 610.69 253.99 260.89 100 260.89 451.76 735.16 586.14 735.16 788.31 461.31 788.31 739.11 900 739.11 900 260.89 433.4 260.89"
+            style="fill: currentColor; stroke-width: 0px"
+          />
+        </svg>
+        <div class="loader-progress">
+          <div class="loader-progress-bar" id="loader-progress-bar"></div>
+        </div>
+        <span class="loader-text" id="loader-text">0</span>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav nav-dark" id="nav">
+      <div class="nav-inner">
+        <a href="/" class="nav-logo">
+          <span class="nav-logo-text">hero—01</span>
+        </a>
+        <div class="nav-links">
+          <a href="/#about" class="nav-link" data-text="about">about,</a>
+          <a href="/#services" class="nav-link" data-text="services">services,</a>
+          <a href="/works/" class="nav-link active" data-text="work">work,</a>
+          <a href="/#contact" class="nav-link" data-text="contact">contact</a>
+        </div>
+        <div class="nav-social">
+          <a href="https://www.instagram.com/viasliberedesignare.saruta/" target="_blank" rel="noopener noreferrer" class="nav-social-link">Instagram</a>
+        </div>
+        <button class="nav-menu-btn" id="nav-menu-btn" aria-label="メニュー">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+      <div class="mobile-menu-inner">
+        <a href="/#about" class="mobile-menu-link">About</a>
+        <a href="/#services" class="mobile-menu-link">Services</a>
+        <a href="/works/" class="mobile-menu-link">Works</a>
+        <a href="/#contact" class="mobile-menu-link">Contact</a>
+      </div>
+    </div>
+
+    <main>
+      <!-- Detail Hero -->
+      <section class="detail-hero" id="detail-hero">
+        <div class="detail-hero-bg" id="detail-hero-bg"></div>
+        <div class="detail-hero-overlay"></div>
+        <div class="container">
+          <div class="detail-hero-content" data-reveal>
+            <a href="/works/" class="detail-back-link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7" />
+              </svg>
+              <span>Back to Works</span>
+            </a>
+            <span class="detail-category" id="detail-category"></span>
+            <h1 class="detail-title" id="detail-title"></h1>
+          </div>
+        </div>
+      </section>
+
+      <!-- Project Info -->
+      <section class="detail-info">
+        <div class="container">
+          <div class="detail-info-grid" data-reveal>
+            <div class="detail-info-meta">
+              <div class="detail-meta-item">
+                <span class="detail-meta-label">Client</span>
+                <span class="detail-meta-value" id="detail-client"></span>
+              </div>
+              <div class="detail-meta-item">
+                <span class="detail-meta-label">Year</span>
+                <span class="detail-meta-value" id="detail-year"></span>
+              </div>
+              <div class="detail-meta-item">
+                <span class="detail-meta-label">Role</span>
+                <span class="detail-meta-value" id="detail-role"></span>
+              </div>
+            </div>
+            <div class="detail-info-desc">
+              <p id="detail-description"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery -->
+      <section class="detail-gallery">
+        <div class="container">
+          <div class="detail-gallery-grid" id="detail-gallery" data-reveal>
+            <!-- gallery items injected by JS -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Related Works -->
+      <section class="detail-related">
+        <div class="container">
+          <h2 class="detail-related-title" data-reveal>Related Works</h2>
+          <div class="detail-related-grid" id="detail-related" data-reveal>
+            <!-- related items injected by JS -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <img src="/logo.svg" alt="Vias Libere Designare" class="footer-logo-img" />
+          </div>
+          <div class="footer-copy">
+            <span>&copy; 2026 ViasLibereDesignare. All rights reserved.</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="./detail.js"></script>
+  </body>
+</html>

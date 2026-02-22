@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ViasLibereDesignare | Creative Design Studio</title>
+    <meta
+      name="description"
+      content="グラフィック・Web・UI/UX・ブランディング・SNSコンテンツ制作。デザインの力でビジネスの可能性を拓く、クリエイティブデザインスタジオ。"
+    />
+    <meta
+      property="og:title"
+      content="ViasLibereDesignare | Creative Design Studio"
+    />
+    <meta
+      property="og:description"
+      content="グラフィック・Web・UI/UX・ブランディング・SNSコンテンツ制作。デザインの力でビジネスの可能性を拓く。"
+    />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=LINE+Seed+JP:wght@100;300;400;700;800&family=Questrial&family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- Loader -->
+    <div class="loader" id="loader">
+      <div class="loader-inner">
+        <svg
+          class="loader-symbol"
+          viewBox="0 0 1000 1000"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <polygon
+            points="433.4 260.89 518.12 372.74 698.65 372.74 518.95 610.69 253.99 260.89 100 260.89 451.76 735.16 586.14 735.16 788.31 461.31 788.31 739.11 900 739.11 900 260.89 433.4 260.89"
+            style="fill: currentColor; stroke-width: 0px"
+          />
+        </svg>
+        <div class="loader-progress">
+          <div class="loader-progress-bar" id="loader-progress-bar"></div>
+        </div>
+        <span class="loader-text" id="loader-text">0</span>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+      <div class="nav-inner">
+        <a href="#hero" class="nav-logo">
+          <span class="nav-logo-text">hero—01</span>
+        </a>
+        <div class="nav-links">
+          <a href="#about" class="nav-link" data-text="about">about,</a>
+          <a href="#services" class="nav-link" data-text="services">services,</a>
+          <a href="#works" class="nav-link" data-text="work">work,</a>
+          <a href="#contact" class="nav-link" data-text="contact">contact</a>
+        </div>
+        <div class="nav-social">
+          <a href="https://www.instagram.com/viasliberedesignare.saruta/" target="_blank" rel="noopener noreferrer" class="nav-social-link">Instagram</a>
+        </div>
+        <button class="nav-menu-btn" id="nav-menu-btn" aria-label="メニュー">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+      <div class="mobile-menu-inner">
+        <a href="#about" class="mobile-menu-link">About</a>
+        <a href="#services" class="mobile-menu-link">Services</a>
+        <a href="#works" class="mobile-menu-link">Works</a>
+        <a href="#contact" class="mobile-menu-link">Contact</a>
+      </div>
+    </div>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero" id="hero">
+        <div class="hero-white"></div>
+        <div class="hero-orange"></div>
+        <div class="hero-logo" data-reveal>
+          <img src="/logo.svg" alt="Vias Libere Designare" class="hero-logo-img" />
+        </div>
+        <div class="hero-portrait" data-reveal>
+          <img src="/hero-kv.jpg" alt="Creative Vision" class="hero-portrait-img" />
+        </div>
+      </section>
+
+      <!-- Services Section (Light) -->
+      <section class="section services-light" id="services">
+        <div class="container">
+          <div class="services-header">
+            <span class="services-nav-label">Services</span>
+            <span class="services-nav-year">2026</span>
+          </div>
+          <div class="services-list">
+            <div class="service-row" data-reveal>
+              <span class="service-num">01</span>
+              <h2 class="service-big-title">Graphic Design</h2>
+              <div class="service-thumb service-thumb-1"></div>
+            </div>
+            <div class="service-row" data-reveal>
+              <span class="service-num">02</span>
+              <h2 class="service-big-title">Web Design</h2>
+              <div class="service-thumb service-thumb-2"></div>
+            </div>
+            <div class="service-row" data-reveal>
+              <span class="service-num">03</span>
+              <h2 class="service-big-title">UIUX Design</h2>
+              <div class="service-thumb service-thumb-3"></div>
+            </div>
+          </div>
+          <div class="services-detail" data-reveal>
+            <div class="services-detail-text">
+              <p>
+                細部へのこだわりを持ち、データドリブンなクリエイティブプロセスで
+                ブランドの本質を形にします。グラフィック＆モーションデザイン、
+                Web・UI/UXデザイン、SNSコンテンツ制作まで幅広く対応します。
+              </p>
+            </div>
+            <div class="services-detail-tags">
+              <p class="services-detail-heading">Graphic & Motion Design</p>
+              <p class="services-detail-heading">UI / UX Design</p>
+              <p class="services-detail-heading">SNS Campaign Creation</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section (Dark) -->
+      <section class="section about" id="about">
+        <div class="container">
+          <div class="about-layout">
+            <div class="about-photo-col" data-reveal>
+              <img src="/about-photo.jpg" alt="猿田 博毅" class="about-photo" />
+            </div>
+            <div class="about-info-col" data-reveal>
+              <div class="about-header">
+                <h2 class="about-title">About</h2>
+                <span class="about-name">猿田 博毅</span>
+              </div>
+              <div class="about-body">
+                <p class="about-desc">
+                  東京・千葉を拠点に活動しているデザイナーです。<br />
+                  ブランディングからロゴ、名刺、パンフレット、Webサイトを学んだことを活かしてお客様の問題解決をお手伝いいたします。<br />
+                  お仕事のご依頼、お待ちしております。
+                </p>
+              </div>
+              <div class="about-tools">
+                <span class="about-tools-label">Tools：</span>
+                <span class="about-tools-list">Illustrator / Photoshop / XD / Premiere pro / Figma / VScode / WordPress / STUDIO / Wix / Shopify</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Works Section (Light) -->
+      <section class="section works works-light" id="works">
+        <div class="container">
+          <div class="section-header section-header-light" data-reveal>
+            <span class="section-label section-label-light">03 — Works</span>
+            <h2 class="section-title section-title-light">Selected Projects</h2>
+          </div>
+          <div class="works-filter" data-reveal>
+            <button class="filter-btn filter-btn-light active" data-filter="all">All</button>
+            <button class="filter-btn filter-btn-light" data-filter="graphic">Graphic</button>
+            <button class="filter-btn filter-btn-light" data-filter="web">Web</button>
+            <button class="filter-btn filter-btn-light" data-filter="branding">Branding</button>
+            <button class="filter-btn filter-btn-light" data-filter="uiux">UI/UX</button>
+          </div>
+          <div class="works-grid" id="works-grid">
+            <div class="work-item" data-category="branding" data-reveal>
+              <div
+                class="work-image"
+                style="
+                  --gradient: linear-gradient(135deg, #ccff00 0%, #1a2e1a 100%);
+                "
+              >
+                <div class="work-overlay">
+                  <span class="work-category">Branding</span>
+                  <h3 class="work-title">Brand Identity Design</h3>
+                  <p class="work-desc">
+                    ブランドアイデンティティ戦略 / ロゴ・VI設計
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="work-item" data-category="web" data-reveal>
+              <div
+                class="work-image"
+                style="
+                  --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                "
+              >
+                <div class="work-overlay">
+                  <span class="work-category">Web Design</span>
+                  <h3 class="work-title">Corporate Website</h3>
+                  <p class="work-desc">コーポレートサイトリニューアル</p>
+                </div>
+              </div>
+            </div>
+            <div class="work-item large" data-category="graphic" data-reveal>
+              <div
+                class="work-image"
+                style="
+                  --gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+                "
+              >
+                <div class="work-overlay">
+                  <span class="work-category">Graphic Design</span>
+                  <h3 class="work-title">Visual Campaign</h3>
+                  <p class="work-desc">キャンペーンビジュアル制作</p>
+                </div>
+              </div>
+            </div>
+            <div class="work-item" data-category="uiux" data-reveal>
+              <div
+                class="work-image"
+                style="
+                  --gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+                "
+              >
+                <div class="work-overlay">
+                  <span class="work-category">UI/UX</span>
+                  <h3 class="work-title">Mobile App Design</h3>
+                  <p class="work-desc">モバイルアプリUI/UXデザイン</p>
+                </div>
+              </div>
+            </div>
+            <div class="work-item" data-category="graphic" data-reveal>
+              <div
+                class="work-image"
+                style="
+                  --gradient: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+                "
+              >
+                <div class="work-overlay">
+                  <span class="work-category">Graphic Design</span>
+                  <h3 class="work-title">Logo Collection</h3>
+                  <p class="work-desc">ロゴデザインコレクション</p>
+                </div>
+              </div>
+            </div>
+            <div class="work-item" data-category="branding" data-reveal>
+              <div
+                class="work-image"
+                style="
+                  --gradient: linear-gradient(135deg, #fccb90 0%, #d57eeb 100%);
+                "
+              >
+                <div class="work-overlay">
+                  <span class="work-category">Branding</span>
+                  <h3 class="work-title">Packaging Design</h3>
+                  <p class="work-desc">パッケージデザイン・ブランドガイド</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="works-cta" data-reveal>
+            <a href="/works/" class="btn-primary btn-works-all">
+              <span>View All Works</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section (Dark) -->
+      <section class="section contact" id="contact">
+        <div class="contact-layout">
+          <div class="contact-photo-col">
+            <img src="/contact-photo.jpg" alt="Creative Professional" class="contact-photo" />
+            <h2 class="contact-heading" data-reveal>Get in touch</h2>
+          </div>
+          <div class="contact-form-col">
+            <div class="contact-form-header" data-reveal>
+              <div class="contact-labels">
+                <div class="contact-label-group">
+                  <span class="contact-label-title">Say Hello</span>
+                  <span class="contact-label-title">Address</span>
+                </div>
+              </div>
+            </div>
+            <form class="contact-form" id="contact-form" data-reveal>
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  placeholder=" "
+                />
+                <label for="name">Name</label>
+                <div class="form-line"></div>
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder=" "
+                />
+                <label for="email">Email address</label>
+                <div class="form-line"></div>
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  placeholder=" "
+                />
+                <label for="company">Company</label>
+                <div class="form-line"></div>
+              </div>
+              <div class="form-group">
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  required
+                  placeholder=" "
+                ></textarea>
+                <label for="message">Message</label>
+                <div class="form-line"></div>
+              </div>
+              <button type="submit" class="btn-primary btn-submit">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+                <span>Send</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <img src="/logo.svg" alt="Vias Libere Designare" class="footer-logo-img" />
+          </div>
+          <div class="footer-copy">
+            <span>&copy; 2026 ViasLibereDesignare. All rights reserved.</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
